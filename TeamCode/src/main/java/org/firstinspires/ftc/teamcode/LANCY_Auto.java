@@ -19,7 +19,9 @@ public class LANCY_Auto extends OpMode {
 
     }
 
-    public void DriveForward()
+    public void DriveForward() {
+
+    }
 
     public void loop() {
 
