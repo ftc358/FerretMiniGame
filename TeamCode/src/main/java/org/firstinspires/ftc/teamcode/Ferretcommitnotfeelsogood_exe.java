@@ -8,6 +8,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
+//BEGINNING OF PUSHBOT HARDWARE
 public class Ferretcommitnotfeelsogood_exe {
     /* Public OpMode members. */
     public DcMotor leftDrive = null;
@@ -43,7 +44,9 @@ public class Ferretcommitnotfeelsogood_exe {
         rightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
     }
+// END OF PUSHBOT HARDWARE
 
+// BEGINNING OF BasicOpMode_Linear
     /**
      * This file contains an minimal example of a Linear "OpMode". An OpMode is a 'program' that runs in either
      * the autonomous or the teleop period of an FTC match. The names of OpModes appear on the menu
@@ -118,5 +121,8 @@ public class Ferretcommitnotfeelsogood_exe {
             }
         }
     }
+
+// END OF BasicOpMode_Linear
+
 }
 
