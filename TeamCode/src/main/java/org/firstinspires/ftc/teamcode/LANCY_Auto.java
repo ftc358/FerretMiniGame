@@ -2,7 +2,6 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 import org.firstinspires.ftc.robotcore.external.matrices.OpenGLMatrix;
@@ -17,6 +16,8 @@ This is the Autonomous code for Group LANCY (Liz, Andrew, Nathan, Cristian, and 
 @Autonomous(name = "Autonomous")
 public class LANCY_Auto extends LinearOpMode {
 
+    //Vuforia Key
+    private static final String vuforiaKey = "";
     //Declare motors
     DcMotor motorLeft = null;
     DcMotor motorRight = null;
@@ -28,11 +29,8 @@ public class LANCY_Auto extends LinearOpMode {
     private VuforiaTrackables visionTargets;
     private VuforiaTrackable target;
     private VuforiaTrackableDefaultListener listener;
-
     private OpenGLMatrix lastKnownLocation;
     private OpenGLMatrix phoneLocation;
-
-    private static final String vuforiaKey = "";
 
     public void runOpMode() throws InterruptedException {
         waitForStart();
