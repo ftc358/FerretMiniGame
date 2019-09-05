@@ -16,13 +16,14 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackableDefau
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
 import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
 import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
+
 import static org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer.CameraDirection.BACK;
 
 /*
 This is the Autonomous code for Group LANCY (Liz, Andrew, Nathan, Cristian, and Yoyo)
  */
 @Autonomous(name = "Autonomous")
-public class LANCY_Auto extends LinearOpMode {
+public class LANCY_Auto_Scheiße extends LinearOpMode {
 
     //Vuforia Key
     private static final String VUFORIA_KEY =
@@ -30,11 +31,13 @@ public class LANCY_Auto extends LinearOpMode {
                     + "/XJGxEp0TP9Kl8PvqSzeXOWIvVa3AeB6MyAQboyW/Pgd/c4a4U"
                     +
                     "/VBs1ouUsVBkEdbaq1iY7RR0cjYr3eLwEt6tmI37Ugbwrd5gmxYvOBQkGqzpbg2U2bVLycc5PkOixu7PqPqaINGZYSlvUzEMAenLOCxZFpsayuCPRbWz6Z9UJfLeAbfAPmmDYoKNXRFll8/jp5Ie7iAhSQgfFggWwyiqMRCFA3GPTsOJS4H1tSiGlMjVzbJnkusPKXfJ0dK3OH9u7ox9ESpi91T0MemXw3nn+/6QRvjGtgFH+wMDuQX7ta89+yW+wqdXX9ZQu8BzY";
+    private static final VuforiaLocalizer.CameraDirection CAMERA_CHOICE = BACK;
     //Declare motors
     DcMotor motorLeft = null;
     DcMotor motorRight = null;
     //Set drive power
     double drivePower = 0.5;
+    VuforiaLocalizer vuforia;
     //Vuforia variables
     private VuforiaLocalizer vuforiaLocalizer;
     private VuforiaLocalizer.Parameters parameters;
@@ -44,9 +47,6 @@ public class LANCY_Auto extends LinearOpMode {
     private OpenGLMatrix lastKnownLocation;
     private OpenGLMatrix phoneLocation;
     private TFObjectDetector tfod;
-    private static final VuforiaLocalizer.CameraDirection CAMERA_CHOICE = BACK;
-    VuforiaLocalizer vuforia;
-
 
     public void runOpMode() throws InterruptedException {
         initVuforia();
@@ -120,7 +120,8 @@ public class LANCY_Auto extends LinearOpMode {
     private void initTfod() {
         int tfodMonitorViewId = hardwareMap.appContext.getResources().getIdentifier(
                 "tfodMonitorViewId", "id", hardwareMap.appContext.getPackageName());
-        TFObjectDetector.Parameters tfodParameters = new TFObjectDetector.Parameters(tfodMonitorViewId);
+        TFObjectDetector.Parameters tfodParameters = new TFObjectDetector.Parameters(
+                tfodMonitorViewId);
         tfod = ClassFactory.getInstance().createTFObjectDetector(tfodParameters, vuforia);
         tfod.loadModelFromAsset("Gold Mineral");
     }
