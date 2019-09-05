@@ -16,7 +16,6 @@ public class LANCY_Auto extends OpMode {
 
     @Override public void init() {
 
-
     }
 
     public void DriveForward() {
