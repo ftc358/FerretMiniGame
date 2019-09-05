@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="738f128f-cf49-4613-b909-1a861d334289" name="Default Changelist" comment="">
+    <list default="true" id="738f128f-cf49-4613-b909-1a861d334289" name="Default Changelist" comment="09/05/2019&#10;Almost There.">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/TeamCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/TeamCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Left.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Left.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Right.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Right.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_TeleOp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_TeleOp.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -27,60 +32,36 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Left.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="270">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="method#driveForwardDistance#0;class#LANCY_Auto_Left#0" />
-                <element signature="method#driveForwardDistance#0;class#LANCY_Auto_Left#0" />
-                <element signature="method#DriveForward#0;class#LANCY_Auto_Left#0" />
-                <element signature="method#runUsingEncoders#0;class#LANCY_Auto_Left#0" />
-                <element signature="method#runUsingEncoders#1;class#LANCY_Auto_Left#0" />
                 <element signature="method#rMResetEncoders#0;class#LANCY_Auto_Left#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Right.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="18" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Right.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="40" selection-end-column="9" />
-              <folding>
-                <element signature="method#turnLeft#0;class#LANCY_Auto_Left#0" />
-                <element signature="method#driveForward#0;class#LANCY_Auto_Left#0" />
-                <element signature="method#rMRunUsingEncoders#0;class#LANCY_Auto_Left#0" />
-                <element signature="method#rMRunToPosition#0;class#LANCY_Auto_Left#0" />
-                <element signature="method#rMResetEncoders#0;class#LANCY_Auto_Left#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_TeleOp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="255">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding>
                 <element signature="method#arm#0;class#LANCY_TeleOp#0" />
-                <element signature="method#DriveForward#0;class#LANCY_TeleOp#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Ferretcommitnotfeelsogood_exe.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,20 +70,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Scheiße.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
+            <state relative-caret-position="1395">
               <caret line="184" selection-start-line="184" selection-end-line="186" selection-end-column="5" />
               <folding>
-                <element signature="e#1197#1289#0" />
-                <element signature="e#1347#1376#0" />
                 <element signature="method#runOpMode#0;class#LANCY_Auto_Scheiße#0" />
-                <element signature="e#3734#4950#0" />
                 <element signature="method#createMatrix#0;class#LANCY_Auto_Scheiße#0" />
                 <element signature="method#initTfod#0;class#LANCY_Auto_Scheiße#0" />
                 <element signature="method#initVuforia#0;class#LANCY_Auto_Scheiße#0" />
-                <element signature="e#5869#5982#0" />
-                <element signature="e#6450#6485#1" />
                 <element signature="method#deactivateVuforia#0;class#LANCY_Auto_Scheiße#0" />
-                <element signature="e#6695#6748#0" />
                 <element signature="method#DriveForward#0;class#LANCY_Auto_Scheiße#0" />
                 <element signature="method#DriveReverse#0;class#LANCY_Auto_Scheiße#0" />
                 <element signature="method#TurnLeft#0;class#LANCY_Auto_Scheiße#0" />
@@ -202,8 +177,8 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,9 +323,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25751072" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25751072" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -440,7 +416,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Ferretcommitnotfeelsogood_exe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
+        <state relative-caret-position="1005">
           <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -450,20 +426,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Scheiße.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
+        <state relative-caret-position="1395">
           <caret line="184" selection-start-line="184" selection-end-line="186" selection-end-column="5" />
           <folding>
-            <element signature="e#1197#1289#0" />
-            <element signature="e#1347#1376#0" />
             <element signature="method#runOpMode#0;class#LANCY_Auto_Scheiße#0" />
-            <element signature="e#3734#4950#0" />
             <element signature="method#createMatrix#0;class#LANCY_Auto_Scheiße#0" />
             <element signature="method#initTfod#0;class#LANCY_Auto_Scheiße#0" />
             <element signature="method#initVuforia#0;class#LANCY_Auto_Scheiße#0" />
-            <element signature="e#5869#5982#0" />
-            <element signature="e#6450#6485#1" />
             <element signature="method#deactivateVuforia#0;class#LANCY_Auto_Scheiße#0" />
-            <element signature="e#6695#6748#0" />
             <element signature="method#DriveForward#0;class#LANCY_Auto_Scheiße#0" />
             <element signature="method#DriveReverse#0;class#LANCY_Auto_Scheiße#0" />
             <element signature="method#TurnLeft#0;class#LANCY_Auto_Scheiße#0" />
@@ -474,42 +444,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_TeleOp.java">
+    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Right.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="method#arm#0;class#LANCY_TeleOp#0" />
-            <element signature="method#DriveForward#0;class#LANCY_TeleOp#0" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="18" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Left.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="270">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="method#driveForwardDistance#0;class#LANCY_Auto_Left#0" />
-            <element signature="method#driveForwardDistance#0;class#LANCY_Auto_Left#0" />
-            <element signature="method#DriveForward#0;class#LANCY_Auto_Left#0" />
-            <element signature="method#runUsingEncoders#0;class#LANCY_Auto_Left#0" />
-            <element signature="method#runUsingEncoders#1;class#LANCY_Auto_Left#0" />
             <element signature="method#rMResetEncoders#0;class#LANCY_Auto_Left#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto_Right.java">
+    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_TeleOp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="40" selection-end-column="9" />
+        <state relative-caret-position="255">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
-            <element signature="method#turnLeft#0;class#LANCY_Auto_Left#0" />
-            <element signature="method#driveForward#0;class#LANCY_Auto_Left#0" />
-            <element signature="method#rMRunUsingEncoders#0;class#LANCY_Auto_Left#0" />
-            <element signature="method#rMRunToPosition#0;class#LANCY_Auto_Left#0" />
-            <element signature="method#rMResetEncoders#0;class#LANCY_Auto_Left#0" />
+            <element signature="method#arm#0;class#LANCY_TeleOp#0" />
           </folding>
         </state>
       </provider>

@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 @TeleOp(name = "TeleOp")
 public class LANCY_TeleOp extends LinearOpMode {
@@ -16,15 +17,19 @@ public class LANCY_TeleOp extends LinearOpMode {
         motorRight = hardwareMap.dcMotor.get("motorRight");
         motorC = hardwareMap.dcMotor.get("motorC");
         motorRight.setDirection(DcMotor.Direction.REVERSE);
+        motorC.setDirection(DcMotor.Direction.REVERSE);
+        int status = 1;
         waitForStart();
         while (opModeIsActive()) {
             motorLeft.setPower(gamepad1.left_stick_y);
             motorRight.setPower(gamepad1.right_stick_y);
-            if (gamepad2.a) {
-                arm(0.5, -373);
+            if (gamepad2.a && status == 1) {
+                status = 0;
+                arm(0.5, -1120);
             }
-            if (gamepad2.b) {
-                arm(0.5, 373);
+            if (gamepad2.b && status == 0) {
+                status = 1;
+                arm(0.5, 1120);
             }
             idle();
         }

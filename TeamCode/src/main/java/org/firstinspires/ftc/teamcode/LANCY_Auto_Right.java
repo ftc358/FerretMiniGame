@@ -15,8 +15,8 @@ public class LANCY_Auto_Right extends LinearOpMode {
         motorRight = hardwareMap.dcMotor.get("motorRight");
         motorRight.setDirection(DcMotor.Direction.REVERSE);
         driveForwardDistance(0.5, 3209);
-        //turnRight(0.5, );
-        //driveForwardDistance();
+        turnRight(0.5, 1365);
+        driveForwardDistance(0.5, 3209);
     }
 
     public void turnRight(double power, int distance) {
