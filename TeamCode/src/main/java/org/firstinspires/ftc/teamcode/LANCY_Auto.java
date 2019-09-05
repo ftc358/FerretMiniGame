@@ -14,6 +14,9 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackable;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackableDefaultListener;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
+import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
+import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
+import static org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer.CameraDirection.BACK;
 
 /*
 This is the Autonomous code for Group LANCY (Liz, Andrew, Nathan, Cristian, and Yoyo)
@@ -22,7 +25,7 @@ This is the Autonomous code for Group LANCY (Liz, Andrew, Nathan, Cristian, and 
 public class LANCY_Auto extends LinearOpMode {
 
     //Vuforia Key
-    private static final String vuforiaKey =
+    private static final String VUFORIA_KEY =
             "AXzW9CD/////AAAAGTPAtr9HRUXZmowtd9p0AUwuXiBVONS/c5x1q8OvjMrQ8"
                     + "/XJGxEp0TP9Kl8PvqSzeXOWIvVa3AeB6MyAQboyW/Pgd/c4a4U"
                     +
@@ -40,15 +43,21 @@ public class LANCY_Auto extends LinearOpMode {
     private VuforiaTrackableDefaultListener listener;
     private OpenGLMatrix lastKnownLocation;
     private OpenGLMatrix phoneLocation;
+    private TFObjectDetector tfod;
+    private static final VuforiaLocalizer.CameraDirection CAMERA_CHOICE = BACK;
+    VuforiaLocalizer vuforia;
+
 
     public void runOpMode() throws InterruptedException {
-        setupVuforia();
+        initVuforia();
         runUsingEncoders();
         //setting robot location to origin
-        lastKnownLocation = createMatrix(0, 0, 0, 0, 0, 0);
+        // lastKnownLocation = createMatrix(0, 0, 0, 0, 0, 0);
+        int turnDist = 1;
         waitForStart();
         OpenGLMatrix originalLocation = listener.getUpdatedRobotLocation();
         //Monitor position using Vuforia (most likely obsolete)
+        /*
         while (opModeIsActive()) {
             OpenGLMatrix latestLocation = listener.getUpdatedRobotLocation();
             // For the listener to not return null, checking for it to prevent errors
@@ -61,26 +70,26 @@ public class LANCY_Auto extends LinearOpMode {
             telemetry.update();
             idle();
         }
-        if (originalLocation.get(0, 0) > originalLocation.get(0, 0)) {
-
+         */
+        if (originalLocation.get(0, 1) > originalLocation.get(0, 0)) {
+            turnDist = -1;
         }
-        else {
 
-        }
     }
 
-    //To set up Vuforia
+    //To set up Vuforia image-based tracking
+    /*
     private void setupVuforia() {
         // Setup parameters to create localizer
         parameters = new VuforiaLocalizer.Parameters(); // Remove camera view from screen
-        parameters.vuforiaLicenseKey = vuforiaKey;
+        parameters.vuforiaLicenseKey = VUFORIA_KEY;
         parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
         parameters.useExtendedTracking = false;
         vuforiaLocalizer = ClassFactory.createVuforiaLocalizer(parameters);
 
         // These are the vision targets that we want to use
         // The string needs to be the name of the appropriate .xml file in the assets folder
-        visionTargets = vuforiaLocalizer.loadTrackablesFromAsset(""); //We need object file
+        visionTargets = vuforiaLocalizer.loadTrackablesFromAsset("Gold Mineral");
 
         // Setup the target to be tracked
         target = visionTargets.get(0); // 0 corresponds to the wheels target
@@ -93,7 +102,10 @@ public class LANCY_Auto extends LinearOpMode {
         // Setup listener and inform it of phone information
         listener = (VuforiaTrackableDefaultListener) target.getListener();
         listener.setPhoneInformation(phoneLocation, parameters.cameraDirection);
+
     }
+     */
+
 
     public OpenGLMatrix createMatrix(float x, float y, float z, float u, float v, float w) {
         return OpenGLMatrix.translation(x, y, z).
@@ -105,8 +117,42 @@ public class LANCY_Auto extends LinearOpMode {
         return matrix.formatAsTransform();
     }
 
+    private void initTfod() {
+        int tfodMonitorViewId = hardwareMap.appContext.getResources().getIdentifier(
+                "tfodMonitorViewId", "id", hardwareMap.appContext.getPackageName());
+        TFObjectDetector.Parameters tfodParameters = new TFObjectDetector.Parameters(tfodMonitorViewId);
+        tfod = ClassFactory.getInstance().createTFObjectDetector(tfodParameters, vuforia);
+        tfod.loadModelFromAsset("Gold Mineral");
+    }
+
+    public void initVuforia() {
+        /*
+         * Configure Vuforia by creating a Parameter object, and passing it to the Vuforia engine.
+         */
+        VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters();
+
+        parameters.vuforiaLicenseKey = VUFORIA_KEY;
+        parameters.cameraDirection = CAMERA_CHOICE;
+
+        //  Instantiate the Vuforia engine
+        vuforia = ClassFactory.getInstance().createVuforia(parameters);
+
+        // Loading trackables is not necessary for the Tensor Flow Object Detection engine.
+
+        if (ClassFactory.getInstance().canCreateTFObjectDetector()) {
+            initTfod();
+        } else {
+            telemetry.addData("Sorry!", "This device is not compatible with TFOD");
+        }
+    }
+
+    public void deactivateVuforia() {
+        tfod.deactivate();
+        tfod.shutdown();
+    }
+
     /*
-    Following is drive code
+    Following is drive code (w/o encoders)
      */
 
     //Drive Forwards
@@ -152,7 +198,9 @@ public class LANCY_Auto extends LinearOpMode {
 
 }
 
-/* Unused Code
+/*
+
+Unused Drive Code
 
     DcMotor motorC = null;
 
@@ -169,4 +217,4 @@ public class LANCY_Auto extends LinearOpMode {
         motorC.setPower(-power);
     }
 
- */
+*/

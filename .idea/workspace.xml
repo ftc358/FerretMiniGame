@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="738f128f-cf49-4613-b909-1a861d334289" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto.java" afterDir="false" />
     </list>
@@ -45,15 +42,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="35" column="73" lean-forward="true" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+            <state relative-caret-position="1632">
+              <caret line="96" column="57" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
               <folding>
-                <element signature="e#4953#4954#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#5305#5306#0" expanded="true" />
+                <element signature="e#5354#5355#0" expanded="true" />
                 <element signature="method#DriveForward#0;class#LANCY_Auto#0" />
                 <element signature="method#DriveReverse#0;class#LANCY_Auto#0" />
                 <element signature="method#TurnLeft#0;class#LANCY_Auto#0" />
                 <element signature="method#TurnRight#0;class#LANCY_Auto#0" />
-                <element signature="e#5638#5639#0" expanded="true" />
+                <element signature="e#7363#7364#0" expanded="true" />
                 <element signature="method#runUsingEncoders#0;class#LANCY_Auto#0" />
                 <element signature="method#runUsingEncoders#1;class#LANCY_Auto#0" />
               </folding>
@@ -98,6 +97,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>key</find>
+      <find>driveforw</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -111,49 +111,19 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1181" />
+    <option name="width" value="1263" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FerretMiniGame" type="1abcf292:AndroidViewProjectNode" />
-              <item name="FtcRobotController" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="FerretMiniGame" type="1abcf292:AndroidViewProjectNode" />
-              <item name="FtcRobotController" type="feadf853:AndroidModuleNode" />
-              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="FerretMiniGame" type="1abcf292:AndroidViewProjectNode" />
-              <item name="TeamCode" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="FerretMiniGame" type="1abcf292:AndroidViewProjectNode" />
-              <item name="TeamCode" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="FerretMiniGame" type="1abcf292:AndroidViewProjectNode" />
-              <item name="TeamCode" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="teamcode" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -266,15 +236,22 @@
       <option name="project" value="LOCAL" />
       <updated>1567637575710</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="09/04/2019&#10;Vuforia Secondary">
+      <created>1567644245541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567644245541</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1263" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21173105" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24242425" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -300,7 +277,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="09/03/2019" />
     <MESSAGE value="09/04/2019&#10;Vuforia Primary" />
-    <option name="LAST_COMMIT_MESSAGE" value="09/04/2019&#10;Vuforia Primary" />
+    <MESSAGE value="09/04/2019&#10;Vuforia Secondary" />
+    <option name="LAST_COMMIT_MESSAGE" value="09/04/2019&#10;Vuforia Secondary" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -357,15 +335,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LANCY_Auto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="35" column="73" lean-forward="true" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+        <state relative-caret-position="1632">
+          <caret line="96" column="57" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
           <folding>
-            <element signature="e#4953#4954#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5305#5306#0" expanded="true" />
+            <element signature="e#5354#5355#0" expanded="true" />
             <element signature="method#DriveForward#0;class#LANCY_Auto#0" />
             <element signature="method#DriveReverse#0;class#LANCY_Auto#0" />
             <element signature="method#TurnLeft#0;class#LANCY_Auto#0" />
             <element signature="method#TurnRight#0;class#LANCY_Auto#0" />
-            <element signature="e#5638#5639#0" expanded="true" />
+            <element signature="e#7363#7364#0" expanded="true" />
             <element signature="method#runUsingEncoders#0;class#LANCY_Auto#0" />
             <element signature="method#runUsingEncoders#1;class#LANCY_Auto#0" />
           </folding>
