@@ -23,7 +23,7 @@ public class LANCY_Auto_Left extends LinearOpMode {
         driveForwardDistance(0.75, 3280);
     }
 
-    public void turnLeft(double power, int distance) {
+    private void turnLeft(double power, int distance) {
         rMResetEncoders();
         motorLeft.setTargetPosition(-distance);
         motorRight.setTargetPosition(distance);
@@ -73,7 +73,7 @@ public class LANCY_Auto_Left extends LinearOpMode {
     }
 
     private void rMResetEncoders() {
-        motorLeft.setMode(DcMotor.RunMode.RESET_ENCODERS);
-        motorRight.setMode(DcMotor.RunMode.RESET_ENCODERS);
+        motorLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        motorRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
 }
