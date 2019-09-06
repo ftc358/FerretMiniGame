@@ -11,12 +11,16 @@ public class LANCY_Auto_Right extends LinearOpMode {
 
     @Override
     public void runOpMode() throws InterruptedException {
+
         motorLeft = hardwareMap.dcMotor.get("motorLeft");
         motorRight = hardwareMap.dcMotor.get("motorRight");
-        motorRight.setDirection(DcMotor.Direction.REVERSE);
-        driveForwardDistance(0.5, 3209);
-        turnRight(0.5, 1365);
-        driveForwardDistance(0.5, 3209);
+        motorLeft.setDirection(DcMotor.Direction.REVERSE);
+
+        waitForStart();
+
+        driveForwardDistance(0.75, 3209);
+        turnRight(0.5, 1190);
+        driveForwardDistance(0.75, 3280);
     }
 
     public void turnRight(double power, int distance) {
@@ -37,7 +41,13 @@ public class LANCY_Auto_Right extends LinearOpMode {
         motorRight.setTargetPosition(distance);
         rMRunToPosition();
         driveForward(power);
-        while (motorRight.isBusy() && motorRight.isBusy()) {
+        while (motorLeft.isBusy() && motorRight.isBusy()) {
+            if (motorLeft.getCurrentPosition() > 0.9 * distance
+                    && motorRight.getCurrentPosition() > 0.9) {
+
+                motorLeft.setPower(0.5 * power);
+                motorRight.setPower(0.5 * power);
+            }
         }
         brake();
         rMRunUsingEncoders();

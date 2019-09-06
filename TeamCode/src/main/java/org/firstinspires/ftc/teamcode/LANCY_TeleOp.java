@@ -3,56 +3,68 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@TeleOp(name = "TeleOp")
+@TeleOp
+
 public class LANCY_TeleOp extends LinearOpMode {
     private DcMotor motorLeft = null;
     private DcMotor motorRight = null;
     private DcMotor motorC = null;
 
-    @Override
     public void runOpMode() throws InterruptedException {
-        motorLeft = hardwareMap.dcMotor.get("motorLeft");
-        motorRight = hardwareMap.dcMotor.get("motorRight");
-        motorC = hardwareMap.dcMotor.get("motorC");
+        motorLeft = hardwareMap.dcMotor.get("motorLeft"); // 0
+        motorRight = hardwareMap.dcMotor.get("motorRight"); // 1
+        motorC = hardwareMap.dcMotor.get("motorC"); // 2
+
         motorRight.setDirection(DcMotor.Direction.REVERSE);
         motorC.setDirection(DcMotor.Direction.REVERSE);
-        int status = 1;
+
+        boolean status = true;
         waitForStart();
+
+        double armPower = 0.5;
+        /*
         while (opModeIsActive()) {
             motorLeft.setPower(gamepad1.left_stick_y);
             motorRight.setPower(gamepad1.right_stick_y);
-            if (gamepad2.a && status == 1) {
-                status = 0;
-                arm(0.5, -1120);
+            if (gamepad2.a && status) {
+                status = false;
+                arm(armPower, -1120);
             }
-            if (gamepad2.b && status == 0) {
-                status = 1;
-                arm(0.5, 1120);
+            if (gamepad2.b && !status) {
+                status = true;
+                arm(armPower, 1120);
+            }
+         */
+        while (opModeIsActive()) {
+            motorLeft.setPower(gamepad1.left_stick_y / 2);
+            motorRight.setPower(gamepad1.right_stick_y / 2);
+
+            motorC.setPower(0);
+            if (gamepad1.left_bumper) {
+                motorC.setPower(-0.95);
+            }
+            if (gamepad1.right_bumper) {
+                motorC.setPower(0.95);
             }
             idle();
+
+            telemetry.addData("leftStick: ", gamepad1.left_stick_y);
+            telemetry.addData("leftPower: ", motorLeft.getPower());
+            telemetry.update();
         }
     }
-
+    /*
     private void arm(double power, int distance) {
-        motorC.setMode(DcMotor.RunMode.RESET_ENCODERS);
-        motorLeft.setTargetPosition(distance);
+        motorC.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         motorC.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        motorC.setTargetPosition(distance);
         motorC.setPower(power);
-        while (motorRight.isBusy() && motorRight.isBusy()) {
+
+        while (motorC.isBusy()) {
         }
         motorC.setPower(0);
         motorC.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
-
-    private void driveForward(double power) {
-        motorLeft.setPower(power);
-        motorRight.setPower(power);
-    }
-
-    public void brake() {
-        driveForward(0);
-    }
-
+     */
 }
