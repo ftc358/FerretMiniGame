@@ -19,7 +19,7 @@ public class LANCY_TeleOp extends LinearOpMode {
         motorRight.setDirection(DcMotor.Direction.REVERSE);
         motorC.setDirection(DcMotor.Direction.REVERSE);
 
-        boolean status = true;
+        //boolean status = true;
         waitForStart();
 
         double armPower = 0.5;
@@ -48,10 +48,11 @@ public class LANCY_TeleOp extends LinearOpMode {
                 motorC.setPower(0.95);
             }
             idle();
-
+            /*
             telemetry.addData("leftStick: ", gamepad1.left_stick_y);
             telemetry.addData("leftPower: ", motorLeft.getPower());
             telemetry.update();
+             */
         }
     }
     /*
