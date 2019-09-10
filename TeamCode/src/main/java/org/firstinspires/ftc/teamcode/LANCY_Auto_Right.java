@@ -19,7 +19,7 @@ public class LANCY_Auto_Right extends LinearOpMode {
         waitForStart();
 
         driveForwardDistance(0.75, 3209);
-        turnRight(0.5, 1190);
+        turnRight(0.5, 1290);
         driveForwardDistance(0.75, 3280);
     }
 
