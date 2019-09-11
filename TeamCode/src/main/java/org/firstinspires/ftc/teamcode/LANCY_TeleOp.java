@@ -1,5 +1,9 @@
 package org.firstinspires.ftc.teamcode;
 
+/*
+Heil!
+ */
+
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -9,15 +13,15 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class LANCY_TeleOp extends LinearOpMode {
     private DcMotor motorLeft = null;
     private DcMotor motorRight = null;
-    private DcMotor motorC = null;
+    //private DcMotor motorC = null;
 
     public void runOpMode() throws InterruptedException {
         motorLeft = hardwareMap.dcMotor.get("motorLeft"); // 0
         motorRight = hardwareMap.dcMotor.get("motorRight"); // 1
-        motorC = hardwareMap.dcMotor.get("motorC"); // 2
+        //motorC = hardwareMap.dcMotor.get("motorC"); // 2
 
         motorRight.setDirection(DcMotor.Direction.REVERSE);
-        motorC.setDirection(DcMotor.Direction.REVERSE);
+        //motorC.setDirection(DcMotor.Direction.REVERSE);
 
         //boolean status = true;
         waitForStart();
@@ -39,7 +43,7 @@ public class LANCY_TeleOp extends LinearOpMode {
         while (opModeIsActive()) {
             motorLeft.setPower(gamepad1.left_stick_y / 2);
             motorRight.setPower(gamepad1.right_stick_y / 2);
-
+            /*
             motorC.setPower(0);
             if (gamepad1.left_bumper) {
                 motorC.setPower(-0.95);
@@ -47,6 +51,8 @@ public class LANCY_TeleOp extends LinearOpMode {
             if (gamepad1.right_bumper) {
                 motorC.setPower(0.95);
             }
+             */
+
             idle();
             /*
             telemetry.addData("leftStick: ", gamepad1.left_stick_y);
