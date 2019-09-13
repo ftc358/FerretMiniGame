@@ -32,7 +32,7 @@ public class LANCY_RIAFI extends LinearOpMode {
     private TFObjectDetector tfod;
 
     @Override
-    public void runOpMode() throws InterruptedException {
+    public void runOpMode() {
         motorLeft = hardwareMap.dcMotor.get("motorLeft");
         motorRight = hardwareMap.dcMotor.get("motorRight");
         motorLeft.setDirection(DcMotor.Direction.REVERSE);
@@ -48,7 +48,11 @@ public class LANCY_RIAFI extends LinearOpMode {
         if (tfod != null) {
             tfod.activate();
         }
+        telemetry.addData("Recognition", "Initiate");
+        telemetry.update();
         direction = getDirection();
+        telemetry.addData("Recognition", "Complete");
+        telemetry.update();
         if (direction == 0) { // Left
             driveForwardDistance(0.75, 3209);
             turnLeft(0.5, 1190);

@@ -14,7 +14,7 @@ public class LANCY_Auto_Left extends LinearOpMode {
     private DcMotor motorRight = null;
 
     @Override
-    public void runOpMode() throws InterruptedException {
+    public void runOpMode() {
 
         motorLeft = hardwareMap.dcMotor.get("motorLeft");
         motorRight = hardwareMap.dcMotor.get("motorRight");
