@@ -1,4 +1,4 @@
-#Thu Sep 12 17:35:57 PDT 2019
-base.0=/Users/andrew/Documents/GitHub/FerretMiniGame/TeamCode/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Fri Sep 13 14:46:00 PDT 2019
+base.0=/Users/nathanliu/Documents/GitHub/FerretMiniGame/TeamCode/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

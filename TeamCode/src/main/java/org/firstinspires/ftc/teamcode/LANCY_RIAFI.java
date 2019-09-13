@@ -55,12 +55,12 @@ public class LANCY_RIAFI extends LinearOpMode {
         telemetry.update();
         if (direction == 0) { // Left
             driveForwardDistance(0.75, 3209);
-            turnLeft(0.5, 1190);
+            turnLeft(0.5, 1160);
             driveForwardDistance(0.75, 3280);
         } else if (direction == 1) { // Right
-            driveForwardDistance(0.75, 3209);
-            turnRight(0.5, 1290);
-            driveForwardDistance(0.75, 3280);
+            driveForwardDistance(0.75, 3050);
+            turnRight(0.5, 1350);
+            driveForwardDistance(0.75, 3220);
         }
         if (tfod != null) {
             tfod.shutdown();
