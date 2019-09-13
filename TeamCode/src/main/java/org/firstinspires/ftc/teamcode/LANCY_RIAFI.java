@@ -45,56 +45,60 @@ public class LANCY_RIAFI extends LinearOpMode {
         telemetry.addData(">", "Press Play to start tracking");
         telemetry.update();
         waitForStart();
-        if (opModeIsActive()) {
-            if (tfod != null) {
-                tfod.activate();
-            }
-            while (opModeIsActive()) {
-                if (tfod != null) {
-                    List<Recognition> updatedRecognitions = tfod.getUpdatedRecognitions();
-                    if (updatedRecognitions != null) {
-                        telemetry.addData("# Object Detected", updatedRecognitions.size());
-                        if (updatedRecognitions.size() == 2) {
-                            int goldMineralX = -1;
-                            int silverMineralX = -1;
-                            for (Recognition recognition : updatedRecognitions) {
-                                if (recognition.getLabel().equals(LABEL_GOLD_MINERAL)) {
-                                    goldMineralX = (int) recognition.getLeft();
-                                } else if (silverMineralX == -1) {
-                                    silverMineralX = (int) recognition.getLeft();
-                                }
-                            }
-                            if (goldMineralX != -1 && silverMineralX != -1) {
-                                if (goldMineralX < silverMineralX) {
-                                    direction = 0;  //Left
-                                    telemetry.addData("Gold Mineral Position", "Left");
-                                } else if (goldMineralX > silverMineralX) {
-                                    direction = 1;  //Right
-                                    telemetry.addData("Gold Mineral Position", "Right");
-                                } else {
-                                    telemetry.addData("Error", "Failed");
-                                }
-                            }
-                        }
-                        telemetry.update();
-                    }
-                }
-            }
+        if (tfod != null) {
+            tfod.activate();
         }
-
-        if (direction == 0) {
+        direction = getDirection();
+        if (direction == 0) { // Left
             driveForwardDistance(0.75, 3209);
             turnLeft(0.5, 1190);
             driveForwardDistance(0.75, 3280);
-        } else if (direction == 1) {
+        } else if (direction == 1) { // Right
             driveForwardDistance(0.75, 3209);
             turnRight(0.5, 1290);
             driveForwardDistance(0.75, 3280);
         }
-
         if (tfod != null) {
             tfod.shutdown();
         }
+    }
+
+    private int getDirection() {
+        direction = -1;
+        while (direction == -1) {
+            if (tfod != null) { // Vuforia Recognition
+                List<Recognition> updatedRecognitions = tfod.getUpdatedRecognitions();
+                if (updatedRecognitions != null) {
+                    telemetry.addData("# Object Detected", updatedRecognitions.size());
+                    if (updatedRecognitions.size() == 2) {
+                        int goldMineralX = -1;
+                        int silverMineralX = -1;
+                        for (Recognition recognition : updatedRecognitions) {
+                            if (recognition.getLabel().equals(LABEL_GOLD_MINERAL)) {
+                                goldMineralX = (int) recognition.getLeft();
+                            } else {
+                                silverMineralX = (int) recognition.getLeft();
+                            }
+                        }
+                        if (goldMineralX != -1 && silverMineralX != -1) {
+                            if (goldMineralX < silverMineralX) {
+                                direction = 0;  //Left
+                                telemetry.addData("Gold Mineral Position", "Left");
+                            } else if (goldMineralX > silverMineralX) {
+                                direction = 1;  //Right
+                                telemetry.addData("Gold Mineral Position", "Right");
+                            } else {
+                                telemetry.addData("Error", "1");
+                            }
+                        } else {
+                            telemetry.addData("Error", "0");
+                        }
+                    }
+                    telemetry.update();
+                }
+            }
+        }
+        return direction;
     }
 
     private void initVuforia() {
