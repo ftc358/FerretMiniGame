@@ -5,10 +5,12 @@ Heil!
  */
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 @Autonomous(name = "Auto Right")
+@Disabled
 public class LANCY_Auto_Right extends LinearOpMode {
     private DcMotor motorLeft = null;
     private DcMotor motorRight = null;

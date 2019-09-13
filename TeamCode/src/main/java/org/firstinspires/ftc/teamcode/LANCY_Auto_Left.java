@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-@Autonomous(name = "Auto Left")
+@Autonomous(name = "LANCY_Auto")
 public class LANCY_Auto_Left extends LinearOpMode {
     private DcMotor motorLeft = null;
     private DcMotor motorRight = null;
