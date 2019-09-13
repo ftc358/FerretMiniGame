@@ -12,13 +12,13 @@ import com.qualcomm.robotcore.hardware.Servo;
 @TeleOp
 
 public class LANCY_TeleOp extends LinearOpMode {
-    private DcMotor motorLeft;
-    private DcMotor motorRight;
-    private Servo armServo;
+    private DcMotor motorLeft = null;
+    private DcMotor motorRight = null;
+    private Servo armServo = null;
     //private DcMotor motorC = null;
 
-    private static final double ARM_RETRACTED_POSITION = 0.2;
-    private static final double ARM_EXTENDED_POSITION = 0.55;
+    private static final double ARM_RETRACTED_POSITION = 0.65;
+    private static final double ARM_EXTENDED_POSITION = 1.0;
 
     public void runOpMode() throws InterruptedException {
         motorLeft = hardwareMap.dcMotor.get("motorLeft"); // 0
