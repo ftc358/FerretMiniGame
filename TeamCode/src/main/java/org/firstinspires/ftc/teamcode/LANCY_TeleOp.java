@@ -21,8 +21,8 @@ public class LANCY_TeleOp extends LinearOpMode {
         armServo.setPosition(ARM_RETRACTED_POSITION);
         waitForStart();
         while (opModeIsActive()) {
-            motorLeft.setPower(gamepad1.left_stick_y / 2);
-            motorRight.setPower(gamepad1.right_stick_y / 2);
+            motorLeft.setPower(gamepad1.left_stick_y * 0.58);
+            motorRight.setPower(gamepad1.right_stick_y * 0.58);
             if (gamepad1.left_bumper) {
                 armServo.setPosition(ARM_EXTENDED_POSITION);
             }
