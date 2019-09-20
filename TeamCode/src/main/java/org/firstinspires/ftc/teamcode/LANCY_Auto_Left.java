@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-@Autonomous(name = "LANCY_FTSIO")
+@Autonomous(name = "Auto Left")
 @Disabled
 public class LANCY_Auto_Left extends LinearOpMode {
     private DcMotor motorLeft = null;

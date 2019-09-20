@@ -1,0 +1,7 @@
+
+*.lock
+*.xml
+.idea/workspace.xml
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/5.4.1/fileHashes/fileHashes.lock
+.gradle/5.4.1/executionHistory/executionHistory.lock
