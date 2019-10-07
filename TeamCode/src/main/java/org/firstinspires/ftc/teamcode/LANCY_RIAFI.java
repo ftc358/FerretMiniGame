@@ -153,7 +153,7 @@ public class LANCY_RIAFI extends LinearOpMode {
         driveForward(power);
         while (motorLeft.isBusy() && motorRight.isBusy()) {
             if (motorLeft.getCurrentPosition() > 0.9 * distance
-                    && motorRight.getCurrentPosition() > 0.9) {
+                    && motorRight.getCurrentPosition() > 0.9 * distance) {
 
                 motorLeft.setPower(0.5 * power);
                 motorRight.setPower(0.5 * power);
